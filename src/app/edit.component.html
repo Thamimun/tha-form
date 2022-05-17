@@ -1,0 +1,35 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="update()" >	 
+
+    <div class="div1" >
+    <label  for="Name">Name</label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <input   formControlName="name" placeholder="Enter Name" required ><span style="color: red;font-size: larger;">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;font-weight: bold;" >Mandatory fields*</span>
+  <br><br>
+  
+  <label for="Phone">  Phone</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="number"  id="phone" formControlName="phone" placeholder="Enter Phone No"><span style="color: red;font-size: larger;">*</span>
+  <br><br>
+  <label for="location">Location</label>  &nbsp;&nbsp;&nbsp;
+             
+  <select  formControlName="location" required>
+    <option>Chennai</option>  
+  
+    <option>bengaluru</option>
+  
+    <option>Salem</option>
+  
+    <option>Namakkal</option>
+    </select>
+    <br><br>
+  
+    <label for="email">  Email </label>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             
+    <input type="text"   formControlName="email" placeholder="email ">
+      <br><br>
+    
+      
+      <button type="submit" class="btn btn-info"  >Submit</button>&nbsp;
+    
+        </div>   
+        </form>
+
+        {{todo | json}}
